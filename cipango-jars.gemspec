@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "cipango-jars.gemspec",
      "lib/cipango-1.0.jar",
      "lib/cipango-jars.rb",
      "lib/jetty-6.1.24.jar",

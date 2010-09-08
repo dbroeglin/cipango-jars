@@ -11,7 +11,8 @@ module CipangoJars
     end
     
     {
-      'cipango' => '1.0', 
+      'cipango' => '1.0',
+      'cipango-dar' => '1.0', 
       'sip-api' => '1.1', 
       'jetty' => '6.1.24', 
       'jetty-util' => '6.1.24', 
