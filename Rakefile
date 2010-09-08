@@ -29,3 +29,23 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+begin
+  require 'ant'
+  directory "pkg/classes"
+  task :compile => "pkg/classes" do |t|
+    ant.javac :srcdir => "ext", :destdir => t.prerequisites.first,
+    :source => "1.5", :target => "1.5", :debug => true,
+    :classpath => "${java.class.path}:${sun.boot.class.path}:" + Dir["lib/*.jar"].join(':')
+  end
+
+  task :jar => :compile do
+    ant.jar :basedir => "pkg/classes", :destfile => "lib/cipango-main-1.0.jar", :includes => "**/*.class"
+  end
+rescue LoadError
+  task :jar do
+    puts "Run 'jar' with JRuby >= 1.5 to re-compile the java war booster"
+  end
+end
+
+task :package => :jar

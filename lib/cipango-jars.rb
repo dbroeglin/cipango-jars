@@ -1,7 +1,7 @@
 module CipangoJars
   PATH = File.expand_path(File.dirname(__FILE__))
 
-  class << self  
+  class << self 
     def all_jar_names
       @all_jar_names ||= []
     end
@@ -16,7 +16,8 @@ module CipangoJars
       'sip-api' => '1.1', 
       'jetty' => '6.1.24', 
       'jetty-util' => '6.1.24', 
-      'servlet-api' => '2.5-20081211'
+      'servlet-api' => '2.5-20081211',
+      'cipango-main' => '1.0'
     }.each_pair do |name, version|
       uname = name.gsub(/-/, '_')
       jar_name = "#{name}-#{version}.jar"

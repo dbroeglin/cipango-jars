@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "cipango-jars.gemspec",
      "lib/cipango-1.0.jar",
      "lib/cipango-jars.rb",
+     "lib/cipango-main-1.0.jar",
      "lib/jetty-6.1.24.jar",
      "lib/jetty-util-6.1.24.jar",
      "lib/servlet-api-2.5-20081211.jar",
