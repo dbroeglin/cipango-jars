@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cipango-jars}
-  s.version = "0.0.0"
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dominique Broeglin"]
-  s.date = %q{2010-09-08}
+  s.date = %q{2010-10-18}
   s.description = %q{Cipango and Jetty minimal dependencies}
   s.email = %q{dominique.broeglin@gmail.com}
   s.extra_rdoc_files = [
@@ -24,9 +24,9 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "cipango-jars.gemspec",
+     "ext/CipangoRunner.java",
      "lib/cipango-1.0.jar",
      "lib/cipango-jars.rb",
-     "lib/cipango-main-1.0.jar",
      "lib/jetty-6.1.24.jar",
      "lib/jetty-util-6.1.24.jar",
      "lib/servlet-api-2.5-20081211.jar",
@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/dbroeglin/cipango-jars}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.6}
+  s.rubygems_version = %q{1.3.7}
   s.summary = %q{Cipango and Jetty minimal dependencies}
   s.test_files = [
     "test/helper.rb",
@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
     else
     end
   else

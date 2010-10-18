@@ -48,4 +48,5 @@ rescue LoadError
   end
 end
 
-task :package => :jar
+namespace :gemspec do
+end

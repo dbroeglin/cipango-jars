@@ -24,18 +24,22 @@ public class CipangoRunner {
     UdpConnector udp = new UdpConnector();
     TcpConnector tcp = new TcpConnector();
     
-    udp.setHost("127.0.0.1");
-    tcp.setHost("127.0.0.1");
+    String sipHost = System.getProperty("sip.host", "0.0.0.0");
+    Integer sipPort = Integer.getInteger("sip.port", 5060);  
+    udp.setHost(sipHost);
+    udp.setPort(sipPort);
+    tcp.setHost(sipHost);
+    tcp.setPort(sipPort);
 
     server.getConnectorManager().setConnectors(new SipConnector[] {udp, tcp});
     
     Connector connector=new SocketConnector();
-    connector.setPort(8080);
+    connector.setHost(System.getProperty("http.host", "0.0.0.0"));
+    connector.setPort(Integer.getInteger("http.port", 8080));
     server.setConnectors(new Connector[]{connector});
 
     SipAppContext sipapp = new SipAppContext(args[0], "/");
     contexts.addHandler(sipapp);
-    
       
     server.start();
   }
