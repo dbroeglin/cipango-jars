@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dominique Broeglin"]
-  s.date = %q{2010-10-18}
+  s.date = %q{2010-10-31}
   s.description = %q{Cipango and Jetty minimal dependencies}
   s.email = %q{dominique.broeglin@gmail.com}
   s.extra_rdoc_files = [
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "cipango-jars.gemspec",
      "ext/CipangoRunner.java",
      "lib/cipango-1.0.jar",
+     "lib/cipango-dar-1.0.jar",
      "lib/cipango-jars.rb",
      "lib/jetty-6.1.24.jar",
      "lib/jetty-util-6.1.24.jar",
